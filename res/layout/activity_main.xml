@@ -1,0 +1,104 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center_vertical"
+        android:orientation="vertical" >
+
+        <EditText
+            android:id="@+id/editTextName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:hint="Nome completo"
+            android:ems="10" >
+
+            <requestFocus />
+        </EditText>
+
+        <EditText
+            android:id="@+id/editTextEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:hint="E-mail"
+            android:inputType="textEmailAddress"
+            android:ems="10" />
+
+        <EditText
+            android:id="@+id/editTextCity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:hint="Cidade"
+            android:ems="10" />
+
+        <Spinner
+            android:id="@+id/spinnerState"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:entries="@array/states_array" />
+
+        <RadioGroup
+            android:id="@+id/radioGroupGender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/radioMen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="Masculino" />
+
+            <RadioButton
+                android:id="@+id/radioWomen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Feminino" />
+        </RadioGroup>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <ToggleButton
+                android:id="@+id/toggleButtonUpdateApp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:textOn="Sim"
+                android:textOff="Não" />
+
+            <TextView
+                android:id="@+id/textViewUpdateApp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Atualizações Automáticas?" />
+
+        </LinearLayout>
+
+        <CheckBox
+            android:id="@+id/checkBoxTermOfServices"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Aceito os termos da aplicação." />
+
+    </LinearLayout>
+
+</RelativeLayout>
